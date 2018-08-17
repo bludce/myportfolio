@@ -122,7 +122,7 @@ a
 .about
 	&__container 
 		@extend .container
-		padding-top: 80px
+		margin-top: 90px
 	&__title
 		font-size: 37px
 		color: $main-color
@@ -156,11 +156,188 @@ a
 		font-size: 22px
 		margin: 0
 		padding-bottom: 10px
+	&__content
+		margin-top: 50px
+
+.merits-content
+	display: flex
+	justify-content: center
+	font-family: 'Museo-100' , sans-serif
+	text-transform: uppercase
+	&__item
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		width: 33%
+	&__count
+		width: 70px
+		height: 70px
+	&__text
+		font-size: 12px
+		text-align: center
+		margin-top: 36px
+
+
+.count
+	font-size: 20px
+	color: $third-color
+	border: 1px solid $third-color
+	transform: rotate(45deg)
+	display: flex
+	justify-content: center
+	align-items: center
+	box-shadow: inset 0 0 0 6px #fff, inset 0 0 0 7px #d6e2ce
+	&__text
+		transform: rotate(-45deg)
+
+.merits-contacts
+	&__contacts
+		margin-top: 50px
+
+.contacts
+	font-family: 'Museo-300' , sans-serif
+	&__title
+		font-family: 'Natasha' , sans-serif
+		color: $second-color
+		font-size: 22px
+		margin: 0
+		padding-bottom: 10px
+	&__content
+		margin-top: 30px
+
+.contacts-content
+	display: flex
+	justify-content: space-between
+	&__item
+		&:first-child
+			width: 60%
+		&:last-child
+			width: 40%
+			display: flex
+			flex-direction: column
+			align-items: center
+	&__icon
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		background: $icon-color url(../img/user.png) no-repeat center center
+		background-size: 30px 30px
+	&__link
+		display: block
+		color: $third-color
+		margin-bottom: 20px
+		border-bottom: 1px solid transparent;
+		&:hover
+			border-bottom: 1px solid #6d706d
+	&__text
+		text-align: center
+		color:#797a77
+		margin: 10px 0 0 0
+
+
+/*========= skills ==========*/
+.skills
+	&__container 
+		@extend .container
+		margin-top: 90px
+	&__title
+		font-size: 37px
+		color: $main-color
+		font-family: 'Natasha' , sans-serif
+		letter-spacing: 0.12em;
+		margin: 0
+	&__list
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 60px
+	
+.skills-item
+	width: 25%
+	display: flex
+	align-items: center
+	&__percent
+		font-family: 'Museo-100' , sans-serif
+		width: 65px
+		height: 65px
+		border-radius: 50%
+		color: $third-color
+		font-size: 13px
+		border: 1px solid $third-color
+		display: flex
+		justify-content: center
+		align-items: center
+		box-shadow: inset 0 0 0 6px #fff, inset 0 0 0 7px #d6e2ce
+	&__text
+		margin-left: 15px
+		font-family: 'Museo-900' , sans-serif
+		text-transform: uppercase
+
+
+
+/*========= portfolio ==========*/
+.portfolio
+	&__container 
+		@extend .container
+		margin-top: 90px
+	&__title
+		font-size: 37px
+		color: $main-color
+		font-family: 'Natasha' , sans-serif
+		letter-spacing: 0.12em;
+		margin: 0
+	&__list
+		margin-top: 55px;
+
+.works
+	display: flex
+	flex-wrap: wrap
+	&__item
+		display: block
+		position: relative
+		width: calc(100% / 3)
+		padding: 0 15px 15px 0
+	&__image
+		width: 100%
+		height: 100%
+.overlay
+	opacity: 0
+	position: absolute
+	background: rgba(0,0,0,0.56)
+	color: #fff
+	top: 0
+	left: 0
+	width: calc(100% - 15px)
+	height: calc(100% - 15px)
+	transition: all 0.5s ease
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	&:hover
+		opacity: 1
+	&__title
+		font-family: 'Museo-900' , sans-serif
+		color: $white
+		text-transform: uppercase
+		letter-spacing: 0.02em
+
+/*========= footer ==========*/
+.footer
+	&__container 
+		@extend .container
+		margin-top: 90px
 	&__text
 		font-family: 'Museo-300' , sans-serif
-		line-height: 1.8em
-		margin-top: 27px
-		letter-spacing: 0.02em
+		text-transform: uppercase
+		font-size: 11px
+		padding-bottom: 15px;
+	&__link
+		color: inherit
+		border-bottom: 1px solid transparent;
+		&:hover
+			border-bottom: 1px solid #6d706d
 
 //ALWAYS END
 @import "media.sass"
