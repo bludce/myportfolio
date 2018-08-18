@@ -1,5 +1,7 @@
 @import "vars.sass"
 @import "fonts.sass"
+@import "mixin.sass"
+@import "sprite.sass"
 
 html
 	box-sizing: border-box
@@ -18,7 +20,7 @@ a
 	&:hover
 		transition: all 0.5s ease
 
-.container 
+%container 
 	width: 940px
 	margin: 0 auto
 
@@ -26,7 +28,7 @@ a
 /*========= Header ==========*/
 .header
 	&__container 
-		@extend .container
+		@extend %container
 		display: flex
 		flex-direction: column
 		justify-content: space-between
@@ -88,8 +90,6 @@ a
 			border-right: 1px solid $main-color
 			transform: rotate(45deg)
 			
-
-
 .logo
 	&__link
 		color: $white
@@ -121,14 +121,10 @@ a
 /*========= about me ==========*/
 .about
 	&__container 
-		@extend .container
+		@extend %container
 		margin-top: 90px
 	&__title
-		font-size: 37px
-		color: $main-color
-		font-family: 'Natasha' , sans-serif
-		letter-spacing: 0.12em;
-		margin: 0
+		+section-title
 	&__content
 		display: flex
 		margin-top: 70px
@@ -138,11 +134,7 @@ a
 		width: 45%
 		margin-right: 5%
 	&__title
-		font-family: 'Natasha' , sans-serif
-		color: $second-color
-		font-size: 22px
-		margin: 0
-		padding-bottom: 10px
+		+subsection-title
 	&__text
 		font-family: 'Museo-300' , sans-serif
 		line-height: 1.8em
@@ -151,11 +143,7 @@ a
 
 .merits
 	&__title
-		font-family: 'Natasha' , sans-serif
-		color: $second-color
-		font-size: 22px
-		margin: 0
-		padding-bottom: 10px
+		+subsection-title
 	&__content
 		margin-top: 50px
 
@@ -198,11 +186,7 @@ a
 .contacts
 	font-family: 'Museo-300' , sans-serif
 	&__title
-		font-family: 'Natasha' , sans-serif
-		color: $second-color
-		font-size: 22px
-		margin: 0
-		padding-bottom: 10px
+		+subsection-title
 	&__content
 		margin-top: 30px
 
@@ -239,54 +223,48 @@ a
 /*========= skills ==========*/
 .skills
 	&__container 
-		@extend .container
+		@extend %container
 		margin-top: 90px
 	&__title
-		font-size: 37px
-		color: $main-color
-		font-family: 'Natasha' , sans-serif
-		letter-spacing: 0.12em;
-		margin: 0
+		+section-title
 	&__list
-		display: flex
-		justify-content: space-between
-		align-items: center
-		margin-top: 60px
-	
-.skills-item
-	width: 25%
-	display: flex
-	align-items: center
-	&__percent
-		font-family: 'Museo-100' , sans-serif
-		width: 65px
-		height: 65px
-		border-radius: 50%
-		color: $third-color
-		font-size: 13px
-		border: 1px solid $third-color
 		display: flex
 		justify-content: center
 		align-items: center
-		box-shadow: inset 0 0 0 6px #fff, inset 0 0 0 7px #d6e2ce
-	&__text
-		margin-left: 15px
-		font-family: 'Museo-900' , sans-serif
-		text-transform: uppercase
-
+		margin-top: 60px
+		flex-wrap: wrap
+	
+.skills-item
+	padding: 0 15px
+	&__image
+		filter: grayscale(100%)
+		transition: all 0.5s ease
+		&-html
+			@include sprite($html5)
+		&-css
+			@include sprite($-c-s-s3)
+		&-js
+			@include sprite($js)
+		&-sass
+			@include sprite($sass)
+		&-gulp
+			@include sprite($gulp)
+		&-bootstrap
+			@include sprite($bootstrap)
+		&-git
+			@include sprite($git)
+		&:hover
+			filter: none
+			transition: all 0.5s ease
 
 
 /*========= portfolio ==========*/
 .portfolio
 	&__container 
-		@extend .container
+		@extend %container
 		margin-top: 90px
 	&__title
-		font-size: 37px
-		color: $main-color
-		font-family: 'Natasha' , sans-serif
-		letter-spacing: 0.12em;
-		margin: 0
+		+section-title
 	&__list
 		margin-top: 55px;
 
@@ -326,7 +304,7 @@ a
 /*========= footer ==========*/
 .footer
 	&__container 
-		@extend .container
+		@extend %container
 		margin-top: 90px
 	&__text
 		font-family: 'Museo-300' , sans-serif

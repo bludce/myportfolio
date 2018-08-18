@@ -1,0 +1,143 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$-c-s-s3-name: 'CSS3'
+$-c-s-s3-x: 200px
+$-c-s-s3-y: 0px
+$-c-s-s3-offset-x: -200px
+$-c-s-s3-offset-y: 0px
+$-c-s-s3-width: 80px
+$-c-s-s3-height: 112px
+$-c-s-s3-total-width: 280px
+$-c-s-s3-total-height: 274px
+$-c-s-s3-image: 'sprite.png'
+$-c-s-s3: (200px, 0px, -200px, 0px, 80px, 112px, 280px, 274px, '../img/sprite.png', 'CSS3', )
+$bootstrap-name: 'bootstrap'
+$bootstrap-x: 200px
+$bootstrap-y: 112px
+$bootstrap-offset-x: -200px
+$bootstrap-offset-y: -112px
+$bootstrap-width: 80px
+$bootstrap-height: 80px
+$bootstrap-total-width: 280px
+$bootstrap-total-height: 274px
+$bootstrap-image: 'sprite.png'
+$bootstrap: (200px, 112px, -200px, -112px, 80px, 80px, 280px, 274px, '../img/sprite.png', 'bootstrap', )
+$git-name: 'git'
+$git-x: 0px
+$git-y: 0px
+$git-offset-x: 0px
+$git-offset-y: 0px
+$git-width: 100px
+$git-height: 100px
+$git-total-width: 280px
+$git-total-height: 274px
+$git-image: 'sprite.png'
+$git: (0px, 0px, 0px, 0px, 100px, 100px, 280px, 274px, '../img/sprite.png', 'git', )
+$gulp-name: 'gulp'
+$gulp-x: 100px
+$gulp-y: 0px
+$gulp-offset-x: -100px
+$gulp-offset-y: 0px
+$gulp-width: 100px
+$gulp-height: 100px
+$gulp-total-width: 280px
+$gulp-total-height: 274px
+$gulp-image: 'sprite.png'
+$gulp: (100px, 0px, -100px, 0px, 100px, 100px, 280px, 274px, '../img/sprite.png', 'gulp', )
+$html5-name: 'html5'
+$html5-x: 0px
+$html5-y: 100px
+$html5-offset-x: 0px
+$html5-offset-y: -100px
+$html5-width: 100px
+$html5-height: 100px
+$html5-total-width: 280px
+$html5-total-height: 274px
+$html5-image: 'sprite.png'
+$html5: (0px, 100px, 0px, -100px, 100px, 100px, 280px, 274px, '../img/sprite.png', 'html5', )
+$js-name: 'js'
+$js-x: 100px
+$js-y: 100px
+$js-offset-x: -100px
+$js-offset-y: -100px
+$js-width: 100px
+$js-height: 100px
+$js-total-width: 280px
+$js-total-height: 274px
+$js-image: 'sprite.png'
+$js: (100px, 100px, -100px, -100px, 100px, 100px, 280px, 274px, '../img/sprite.png', 'js', )
+$sass-name: 'sass'
+$sass-x: 0px
+$sass-y: 200px
+$sass-offset-x: 0px
+$sass-offset-y: -200px
+$sass-width: 100px
+$sass-height: 74px
+$sass-total-width: 280px
+$sass-total-height: 274px
+$sass-image: 'sprite.png'
+$sass: (0px, 200px, 0px, -200px, 100px, 74px, 280px, 274px, '../img/sprite.png', 'sass', )
+$spritesheet-width: 280px
+$spritesheet-height: 274px
+$spritesheet-image: 'sprite.png'
+$spritesheet-sprites: ($-c-s-s3, $bootstrap, $git, $gulp, $html5, $js, $sass, )
+$spritesheet: (280px, 274px, 'sprite.png', $spritesheet-sprites, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)

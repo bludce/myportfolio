@@ -28,6 +28,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.1",
+    "gulp.spritesmith": "^6.9.0",
     "imagemin-pngquant": "^6.0.0"
   }
 }

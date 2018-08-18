@@ -10,6 +10,18 @@ var gulp       = require('gulp'), // Подключаем Gulp
     pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
     cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
     autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+    spritesmith = require('gulp.spritesmith');
+
+gulp.task('sprite', function () {
+  // Generate our spritesheet
+  var spriteData = gulp.src('app/img/sprites/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: '_sprite.sass'
+    
+  }));
+    spriteData.img.pipe(gulp.dest('./app/img/')); // путь, куда сохраняем картинку
+    spriteData.css.pipe(gulp.dest('./app/sass/')); // путь, куда сохраняем стили
+});
 
 gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src('app/sass/**/*.sass') // Берем источник

@@ -1,30 +1,172 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ru">
-
 <head>
-
 	<meta charset="utf-8">
-
-	<title>Заголовок</title>
-	<meta name="description" content="">
-
+	<title>My portfolio</title>
+	<meta name="description" content="Алексей Задорожный, личная страница">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<meta property="og:image" content="path/to/image.jpg">
-
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-	<link rel="stylesheet" href="css/main.min.css">
-
-
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+ 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"> 
+	<link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
+	<header class="header">
+		<div class="header__container">
+			<div class="header__nav">
+				<div class="logo">
+					<a href="#" class="logo__link">
+						<span class="logo__text">my</span>portfolio
+					</a> 
+				</div>
+				<nav class="nav">
+					<a href="" class="nav__link">about me</a>
+					<a href="" class="nav__link">skills</a>
+					<a href="" class="nav__link">portfolio</a>
+				</nav>
+				<div class="mail">
+					<a href="" class="mail__item">az90@gmail.com</a>
+				</div>
+			</div>
+			<div class="header__life">
+				<h1 class="header__title">Frontend</h1>
+				<p class="header__text">my little fettish</p>
+			</div>
+			<a href="#" class="header__scroll"></a>
+		</div>
+	</header>
+	<section class="about">
+		<div class="about__container">
+			<h2 class="about__title">About me</h2>
+			<div class="about__content">
+				<div class="background background_half-width">
+					<h3 class="background__title">background</h3>
+					<p class="background__text">Hello. My name is Alexey Zadorozhny. I live in the outback called Stary Oskol. This is in the Belgorod region. I'm a junior frontend developer. </p>
+					<p class="background__text">I began my journey in the distant 2015. But there were difficulties with my personal life and I abandoned it. Now 2018, I got a job as a web developer. I work with wordpress, 1C-bitrix.</p>
+					<p class="background__text">The personal time I improve my skill. I study a lot of technologies. And here I will lay out all my achievements in technology promotion. The code can be viewed at github.com</p>
+				</div>
+				<div class="merits-contacts">
+					<div class="merits">
+						<h3 class="merits__title">Merrits</h3>
+						<div class="merits-content merits__content">
+							<div class="merits-content__item">
+								<div class="count merits-content__count ">
+									<span class="count__text">6</span>
+								</div>
+								<div class="merits-content__text">completed projects</div>
+							</div>
+							<div class="merits-content__item">
+								<div class="count merits-content__count ">
+									<span class="count__text">10</span>
+								</div>
+								<div class="merits-content__text">Learned technologies</div>
+							</div>
+							<div class="merits-content__item">
+								<div class="count merits-content__count ">
+									<span class="count__text">1</span>
+								</div>
+								<div class="merits-content__text">Year of <br>experience</div>
+							</div>
 
-	<!-- Здесь пишем код -->
+						</div>
+					</div>
+					<div class="contacts merits-contacts__contacts">
+						<h3 class="contacts__title">Contacts</h3>
+						<div class="contacts-content contacts__content">
+							<div class="contacts-content__item">
+								<a href="https://github.com/bludce" class="contacts-content__link">github.com/bludce</a>
+								<a href="https://telegram.me/bludce" class="contacts-content__link">telegram.me/bludce</a>
+								<a href="mailto:AleksZadorozhny90@gmail.com" class="contacts-content__link">AleksZadorozhny90@gmail.com</a>
+							</div>
+							<div class="contacts-content__item">
+								<div class="contacts-content__icon"></div>
+								<p class="contacts-content__text">Do not hesitate, write</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="skills">
+		<div class="skills__container">
+			<h2 class="skills__title">Skills</h2>
+			<div class="skills__list">
+				<div class="skills-item">
+					<div class="skills-item__image skills-item__image-html" ></div>
+				</div>
+				<div class="skills-item">
+					<div class="skills-item__image skills-item__image-css" ></div>
+				</div>
+				<div class="skills-item">
+					<div class="skills-item__image skills-item__image-js" ></div>
+				</div>
+				<div class="skills-item">
+					<div class="skills-item__image skills-item__image-sass" ></div>
+				</div>
+				<div class="skills-item">
+					<div class="skills-item__image skills-item__image-gulp"></div>
+				</div>
+				<div class="skills-item">
+					<div class="skills-item__image skills-item__image-bootstrap"></div>
+				</div>
+				<div class="skills-item">
+					<div class="skills-item__image skills-item__image-git"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="portfolio">
+		<div class="portfolio__container">
+			<h2 class="portfolio__title">portfolio</h2>
+			<div class="portfolio__list works">
+				<a href="" class="works__item">
+					<img src="img/portfolio1.jpeg" alt="portfolio" class="works__image">
+					<div class="overlay">
+						<div class="overlay__title">пример работы</div>
+					</div>
+				</a>
+				<a href="" class="works__item">
+					<img src="img/portfolio2.jpeg" alt="portfolio" class="works__image">
+					<div class="overlay">
+						<div class="overlay__title">пример работы</div>
+					</div>
+				</a>
+				<a href="" class="works__item">
+					<img src="img/portfolio3.jpeg" alt="portfolio" class="works__image">
+					<div class="overlay">
+						<div class="overlay__title">пример работы</div>
+					</div>
+				</a>
+				<a href="" class="works__item">
+					<img src="img/portfolio4.jpeg" alt="portfolio" class="works__image">
+					<div class="overlay">
+						<div class="overlay__title">пример работы</div>
+					</div>
+				</a>
+				<a href="" class="works__item">
+					<img src="img/portfolio5.jpeg" alt="portfolio" class="works__image">
+					<div class="overlay">
+						<div class="overlay__title">пример работы</div>
+					</div>
+				</a>
+				<a href="" class="works__item">
+					<img src="img/portfolio6.jpeg" alt="portfolio" class="works__image">
+					<div class="overlay">
+						<div class="overlay__title">пример работы</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="footer__container">
+			<p class="footer__text">
+				2018 / <a href="https://github.com/bludce" target="_blank" class="footer__link" >Aleksey Zadorozhny</a>
+			</p>
+		</div>
+	</footer>
+
 
 
 	<!--[if lt IE 9]>
