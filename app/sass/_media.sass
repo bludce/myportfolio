@@ -1,30 +1,109 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens 1200*/
-
-
+@media screen and (max-width: 1200px) 
+	%container 
+    	width: 940px
 
 /* Medium Devices, Desktops  992*/
-@media screen and (max-width: 992px) 
-	.container 
+@media screen and (max-width: 992px)
+	%container 
     	width: 720px
-
+	.about
+		&__content
+			display: block
+			width: 100%
+	.background
+		width: 100%
+		padding-bottom: 30px
+		&__text
+			margin-top: 16px 
+	.skills-item
+		width: 30%
+		&__image
+			margin: auto
+	.works
+		&__item
+			width: 50%
 
 
 /* Small Devices, Tablets 768*/
 @media screen and (max-width: 768px)
-	.container 
-    	width: 540px
-
-
+	%container
+		width: 90%
+	.nav
+		display: none
 
 /* Medium Devices, Desktops 480*/
-@media  (max-width: 480px)
-	.container 
-    	width: 90%;
+@media screen and (max-width: 480px)
+	body
+		font-size: 14px
+	.header
+		&__nav
+			flex-direction: column
+			align-items: center
+		&__title
+			font-size: 40px
+		&__text
+			font-size: 20px
+	.about
+		&_padding-top
+			padding-top: 40px
+		&__content
+			margin-top: 30px
+		&__title
+			font-size: 30px
+			text-align: center
+
+	.background
+		&__title
+			text-align: center
+	.merits-contacts
+		&__contacts
+			margin-top: 30px
+	.merits
+		&__content
+			margin-top: 30px
+		&__title
+			text-align: center
+	.contacts
+		&__title
+			text-align: center
+
+	.merits-content
+		&__item
+			width: 100%
+			margin-bottom: 30px
+	.contacts-content
+		&__item
+			width: 100%
+			text-align: center
+			&_column
+				display: none
+	.skills
+		&_padding-top
+			padding-top: 30px
+		&__list
+			margin-top: 30px
+		&__title
+			font-size: 30px
+			text-align: center
+	.portfolio
+		&_padding-top
+			padding-top: 30px
+		&__list
+			margin-top: 30px
+		&__title
+			font-size: 30px
+			text-align: center
+	.works
+    	&__item
+    		width: 100%
     	
 
 
 /* Custom, iPhone Retina 320*/
 
-
+@media screen and (max-width: 320px)
+	.skills-item
+		width: 50%

@@ -122,7 +122,8 @@ a
 .about
 	&__container 
 		@extend %container
-		margin-top: 90px
+	&_padding-top
+		padding-top: 90px
 	&__title
 		+section-title
 	&__content
@@ -150,6 +151,7 @@ a
 .merits-content
 	display: flex
 	justify-content: center
+	flex-wrap: wrap
 	font-family: 'Museo-100' , sans-serif
 	text-transform: uppercase
 	&__item
@@ -194,9 +196,8 @@ a
 	display: flex
 	justify-content: space-between
 	&__item
-		&:first-child
-			width: 60%
-		&:last-child
+		width: 50%
+		&_column
 			width: 40%
 			display: flex
 			flex-direction: column
@@ -224,7 +225,8 @@ a
 .skills
 	&__container 
 		@extend %container
-		margin-top: 90px
+	&_padding-top
+		padding-top: 90px
 	&__title
 		+section-title
 	&__list
@@ -235,23 +237,23 @@ a
 		flex-wrap: wrap
 	
 .skills-item
-	padding: 0 15px
+	padding: 0 15px 15px 15px
 	&__image
 		filter: grayscale(100%)
 		transition: all 0.5s ease
-		&-html
+		&_html
 			@include sprite($html5)
-		&-css
+		&_css
 			@include sprite($-c-s-s3)
-		&-js
+		&_js
 			@include sprite($js)
-		&-sass
+		&_sass
 			@include sprite($sass)
-		&-gulp
+		&_gulp
 			@include sprite($gulp)
-		&-bootstrap
+		&_bootstrap
 			@include sprite($bootstrap)
-		&-git
+		&_git
 			@include sprite($git)
 		&:hover
 			filter: none
@@ -262,7 +264,8 @@ a
 .portfolio
 	&__container 
 		@extend %container
-		margin-top: 90px
+	&_padding-top
+		padding-top: 90px
 	&__title
 		+section-title
 	&__list
@@ -305,7 +308,6 @@ a
 .footer
 	&__container 
 		@extend %container
-		margin-top: 90px
 	&__text
 		font-family: 'Museo-300' , sans-serif
 		text-transform: uppercase
