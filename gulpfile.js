@@ -31,13 +31,11 @@ gulp.task('sass', function(){ // Создаем таск Sass
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
 
-gulp.task('script', function(){ // Создаем таск Sass
-    return gulp.src('app/js/*.js') // Берем источник
-        .pipe(concat('main.js')) // Преобразуем Sass в CSS посредством gulp-sass
-        .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
-        .pipe(uglify())
-        .pipe(gulp.dest('app/js')) // Выгружаем результата в папку app/css
-        .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
+gulp.task('scripts', function() {
+    return gulp.src([ // Берем все необходимые библиотеки
+        'bower_components/jquery/dist/jquery.min.js', // Берем jQuery
+        ])
+        .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 });
 
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
@@ -49,7 +47,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
     });
 });
 
-gulp.task('watch', ['browser-sync' , 'script'], function() {
+gulp.task('watch', ['browser-sync' , 'scripts'], function() {
     gulp.watch('app/sass/**/*.sass', ['sass']); // Наблюдение за sass файлами в папке sass
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
     gulp.watch('app/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js

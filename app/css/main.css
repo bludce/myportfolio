@@ -141,6 +141,32 @@ a {
     -webkit-border-radius: 5px;
             border-radius: 5px; }
 
+.nav_block {
+  -webkit-transition: all 2s linear;
+  -o-transition: all 2s linear;
+  transition: all 2s linear;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0ba360), to(#3cba92));
+  background: -webkit-linear-gradient(bottom, #0ba360 0%, #3cba92 100%);
+  background: -o-linear-gradient(bottom, #0ba360 0%, #3cba92 100%);
+  background: linear-gradient(to top, #0ba360 0%, #3cba92 100%); }
+
 .mail__item {
   font-size: 13px;
   color: #fff;
@@ -149,57 +175,62 @@ a {
   .mail__item:hover {
     border-color: #6d706d; }
 
-.target-burger {
-  display: none;
-  margin: 1.125em;
-  width: 3.250em;
-  height: 3.250em;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 5;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-
-.buns {
-  width: 1.625em;
-  height: 1.625em;
-  list-style: none;
-  margin: -0.8125em 0 0 -0.8125em;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: #fff; }
-  .buns__item {
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    margin-top: 0.5em; }
-
 .mobile-menu {
+  display: none; }
+  .mobile-menu__icon {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    cursor: pointer; }
+  .mobile-menu__line {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg); }
+    .mobile-menu__line:nth-child(1) {
+      top: 0; }
+    .mobile-menu__line:nth-child(2) {
+      top: 12px; }
+    .mobile-menu__line:nth-child(3) {
+      top: 12px; }
+    .mobile-menu__line:nth-child(4) {
+      top: 24px; }
+
+.close {
   display: none;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  width: 30px;
+  height: 30px;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  padding: 2em; }
-  .mobile-menu__list {
-    padding: 2em 0 0 0;
-    list-style: none;
-    margin: 0; }
-  .mobile-menu__item {
-    border-bottom: 1px solid #888886; }
-  .mobile-menu__link {
-    font-size: 1.250em;
-    color: #fff;
-    padding: 1em 0;
-    font-family: 'Museo-900' , sans-serif;
+  top: 50px;
+  right: 30px;
+  cursor: pointer; }
+  .close__line:nth-child(1) {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    left: 15px;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .close__line:nth-child(2) {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    left: 15px;
+    background: #fff;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  .close-display {
     display: block; }
 
 /*========= about me ==========*/
@@ -571,22 +602,22 @@ a {
 @media screen and (max-width: 768px) {
   .header__container, .about__container, .skills__container, .portfolio__container, .footer__container {
     width: 90%; }
-  .header__nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
   .nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10; }
+    .nav__link {
+      font-size: 25px; }
+  .mobile-menu {
+    display: block; }
+  .mail {
     display: none; }
   .about__content {
-    margin-top: 30px; }
-  .target-burger {
-    display: block; } }
+    margin-top: 30px; } }
 
 /* Medium Devices, Desktops 480*/
 @media screen and (max-width: 480px) {
@@ -603,6 +634,8 @@ a {
   .about__title {
     font-size: 30px;
     text-align: center; }
+  .skills-item {
+    width: 50%; }
   .background__title {
     text-align: center; }
   .merits-contacts__contacts {
@@ -635,11 +668,8 @@ a {
   .portfolio__title {
     font-size: 30px;
     text-align: center; }
+  .overlay {
+    width: 100%; }
   .works__item {
     width: 100%;
     padding-right: 0; } }
-
-/* Custom, iPhone Retina 320*/
-@media screen and (max-width: 320px) {
-  .skills-item {
-    width: 50%; } }
