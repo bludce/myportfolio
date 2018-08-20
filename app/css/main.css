@@ -62,7 +62,8 @@ a {
   background-attachment: fixed;
   -webkit-background-size: cover;
           background-size: cover;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
   .header__nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -148,6 +149,59 @@ a {
   .mail__item:hover {
     border-color: #6d706d; }
 
+.target-burger {
+  display: none;
+  margin: 1.125em;
+  width: 3.250em;
+  height: 3.250em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.buns {
+  width: 1.625em;
+  height: 1.625em;
+  list-style: none;
+  margin: -0.8125em 0 0 -0.8125em;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff; }
+  .buns__item {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    margin-top: 0.5em; }
+
+.mobile-menu {
+  display: none;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 2em; }
+  .mobile-menu__list {
+    padding: 2em 0 0 0;
+    list-style: none;
+    margin: 0; }
+  .mobile-menu__item {
+    border-bottom: 1px solid #888886; }
+  .mobile-menu__link {
+    font-size: 1.250em;
+    color: #fff;
+    padding: 1em 0;
+    font-family: 'Museo-900' , sans-serif;
+    display: block; }
+
 /*========= about me ==========*/
 .about_padding-top {
   padding-top: 90px; }
@@ -182,6 +236,9 @@ a {
   line-height: 1.8em;
   margin-top: 27px;
   letter-spacing: 0.02em; }
+
+.merits-contacts_half-width {
+  width: 50%; }
 
 .merits__title {
   font-family: 'Natasha' , sans-serif;
@@ -309,7 +366,7 @@ a {
     -webkit-background-size: 30px 30px;
             background-size: 30px 30px; }
   .contacts-content__link {
-    display: block;
+    display: inline-block;
     color: #204d15;
     margin-bottom: 20px;
     border-bottom: 1px solid transparent; }
@@ -496,6 +553,8 @@ a {
   .about__content {
     display: block;
     width: 100%; }
+  .merits-contacts_half-width {
+    width: 100%; }
   .background {
     width: 100%;
     padding-bottom: 30px; }
@@ -512,13 +571,6 @@ a {
 @media screen and (max-width: 768px) {
   .header__container, .about__container, .skills__container, .portfolio__container, .footer__container {
     width: 90%; }
-  .nav {
-    display: none; } }
-
-/* Medium Devices, Desktops 480*/
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 14px; }
   .header__nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -529,6 +581,17 @@ a {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+  .nav {
+    display: none; }
+  .about__content {
+    margin-top: 30px; }
+  .target-burger {
+    display: block; } }
+
+/* Medium Devices, Desktops 480*/
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px; }
   .header__title {
     font-size: 40px; }
   .header__text {
@@ -573,7 +636,8 @@ a {
     font-size: 30px;
     text-align: center; }
   .works__item {
-    width: 100%; } }
+    width: 100%;
+    padding-right: 0; } }
 
 /* Custom, iPhone Retina 320*/
 @media screen and (max-width: 320px) {

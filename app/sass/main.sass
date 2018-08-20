@@ -40,6 +40,7 @@ a
 	background-attachment: fixed
 	background-size: cover
 	height: 100vh
+	position: relative
 	&__nav
 		display: flex
 		justify-content: space-between
@@ -117,6 +118,53 @@ a
 		&:hover
 			border-color: rgba(109,112,109,1)
 
+.target-burger
+	display: none
+	margin: 1.125em
+	width: 3.250em
+	height: 3.250em
+	position: absolute
+	top: 0
+	right: 0
+	z-index: 5
+	transition: all 0.5s ease
+.buns
+	width: 1.625em
+	height: 1.625em
+	list-style: none
+	margin: -0.8125em 0 0 -0.8125em
+	padding: 0
+	position: absolute
+	top: 50%
+	left: 50%
+	color: $white
+	&__item
+		width: 100%
+		height: 2px
+		background: $white
+		margin-top: 0.5em
+
+.mobile-menu
+	display: none
+	transition: all 0.5s ease
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	padding: 2em
+	&__list
+		padding: 2em 0 0 0
+		list-style: none
+		margin: 0
+	&__item
+		border-bottom: 1px solid $second-color
+	&__link
+		font-size: 1.250em
+		color: $white
+		padding: 1em 0
+		font-family: 'Museo-900' , sans-serif
+		display: block
 
 /*========= about me ==========*/
 .about
@@ -141,6 +189,10 @@ a
 		line-height: 1.8em
 		margin-top: 27px
 		letter-spacing: 0.02em
+
+.merits-contacts
+	&_half-width
+		width: 50%
 
 .merits
 	&__title
@@ -209,7 +261,7 @@ a
 		background: $icon-color url(../img/user.png) no-repeat center center
 		background-size: 30px 30px
 	&__link
-		display: block
+		display: inline-block
 		color: $third-color
 		margin-bottom: 20px
 		border-bottom: 1px solid transparent;

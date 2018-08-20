@@ -32,7 +32,7 @@ gulp.task('sass', function(){ // Создаем таск Sass
 });
 
 gulp.task('script', function(){ // Создаем таск Sass
-    return gulp.src('app/js/**/*.js') // Берем источник
+    return gulp.src('app/js/*.js') // Берем источник
         .pipe(concat('main.js')) // Преобразуем Sass в CSS посредством gulp-sass
         .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
         .pipe(uglify())
