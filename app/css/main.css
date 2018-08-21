@@ -162,10 +162,7 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left bottom, left top, from(#0ba360), to(#3cba92));
-  background: -webkit-linear-gradient(bottom, #0ba360 0%, #3cba92 100%);
-  background: -o-linear-gradient(bottom, #0ba360 0%, #3cba92 100%);
-  background: linear-gradient(to top, #0ba360 0%, #3cba92 100%); }
+  background: #22241b; }
 
 .mail__item {
   font-size: 13px;
@@ -324,8 +321,8 @@ a {
 
 .count {
   font-size: 20px;
-  color: #204d15;
-  border: 1px solid #204d15;
+  color: #22241b;
+  border: 1px solid #22241b;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -341,8 +338,8 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: inset 0 0 0 6px #fff, inset 0 0 0 7px #d6e2ce;
-          box-shadow: inset 0 0 0 6px #fff, inset 0 0 0 7px #d6e2ce; }
+  -webkit-box-shadow: inset 0 0 0 6px #fff, inset 0 0 0 7px #dbdbdb;
+          box-shadow: inset 0 0 0 6px #fff, inset 0 0 0 7px #dbdbdb; }
   .count__text {
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
@@ -393,12 +390,12 @@ a {
     height: 50px;
     -webkit-border-radius: 50%;
             border-radius: 50%;
-    background: #eef1ed url(../img/user.png) no-repeat center center;
+    background: #dbdbdb url(../img/user.png) no-repeat center center;
     -webkit-background-size: 30px 30px;
             background-size: 30px 30px; }
   .contacts-content__link {
     display: inline-block;
-    color: #204d15;
+    color: #888886;
     margin-bottom: 20px;
     border-bottom: 1px solid transparent; }
     .contacts-content__link:hover {
@@ -584,6 +581,8 @@ a {
   .about__content {
     display: block;
     width: 100%; }
+  .contacts-content__link {
+    display: block; }
   .merits-contacts_half-width {
     width: 100%; }
   .background {
@@ -654,8 +653,6 @@ a {
     text-align: center; }
     .contacts-content__item_column {
       display: none; }
-  .contacts-content__link {
-    display: block; }
   .skills_padding-top {
     padding-top: 30px; }
   .skills__list {

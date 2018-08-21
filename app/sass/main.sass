@@ -114,7 +114,7 @@ a
 		flex-direction: column
 		justify-content: center
 		align-items: center
-		background: linear-gradient(to top, #0ba360 0%, #3cba92 100%)
+		background: $main-color
 
 .mail
 	&__item
@@ -236,15 +236,16 @@ a
 
 .count
 	font-size: 20px
-	color: $third-color
-	border: 1px solid $third-color
+	color: $main-color
+	border: 1px solid $main-color
 	transform: rotate(45deg)
 	display: flex
 	justify-content: center
 	align-items: center
-	box-shadow: inset 0 0 0 6px $white, inset 0 0 0 7px #d6e2ce
+	box-shadow: inset 0 0 0 6px $white, inset 0 0 0 7px $third-color
 	&__text
 		transform: rotate(-45deg)
+
 
 .merits-contacts
 	&__contacts
@@ -271,11 +272,11 @@ a
 		width: 50px
 		height: 50px
 		border-radius: 50%
-		background: $icon-color url(../img/user.png) no-repeat center center
+		background: $third-color url(../img/user.png) no-repeat center center
 		background-size: 30px 30px
 	&__link
 		display: inline-block
-		color: $third-color
+		color: $second-color
 		margin-bottom: 20px
 		border-bottom: 1px solid transparent;
 		&:hover
