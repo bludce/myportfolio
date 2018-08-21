@@ -69,8 +69,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('script:build', function() {
-    return gulp.src('app/js/*.js')
-        .pipe(concat('main.js'))
+    return gulp.src('app/js/main.js')
         .pipe(uglify())
         .pipe(rename({suffix: '.min'})) 
         .pipe(gulp.dest('dist/js'))
