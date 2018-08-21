@@ -654,6 +654,8 @@ a {
     text-align: center; }
     .contacts-content__item_column {
       display: none; }
+  .contacts-content__link {
+    display: block; }
   .skills_padding-top {
     padding-top: 30px; }
   .skills__list {
