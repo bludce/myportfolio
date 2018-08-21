@@ -8,10 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" href="img/favicon.png" type="image/x-icon">
  	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"> 
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-	<header class="header">
+	<header id="header" class="header">
 		<div class="header__container">
 			<div class="header__nav">
 				<div class="logo">
@@ -20,22 +20,34 @@
 					</a> 
 				</div>
 				<nav class="nav">
-					<a href="" class="nav__link">about me</a>
-					<a href="" class="nav__link">skills</a>
-					<a href="" class="nav__link">portfolio</a>
+					<a href="#about" class="nav__link">about me</a>
+					<a href="#skills" class="nav__link">skills</a>
+					<a href="#portfolio" class="nav__link">portfolio</a>
+					<div class="close">
+						<div class="close__line"></div>
+						<div class="close__line"></div>
+					</div>
 				</nav>
 				<div class="mail">
 					<a href="" class="mail__item">az90@gmail.com</a>
-				</div>
+				</div>	
+				<div class="mobile-menu">
+					<div class="mobile-menu__icon">
+						<span class="mobile-menu__line"></span>
+						<span class="mobile-menu__line"></span>
+						<span class="mobile-menu__line"></span>
+						<span class="mobile-menu__line"></span>
+					</div>
+				</div>	    
 			</div>
 			<div class="header__life">
 				<h1 class="header__title">Frontend</h1>
 				<p class="header__text">my little fettish</p>
 			</div>
-			<a href="#" class="header__scroll"></a>
+			<a href="#about" class="header__scroll"></a>
 		</div>
 	</header>
-	<section class="about">
+	<section id="about" class="about about_padding-top">
 		<div class="about__container">
 			<h2 class="about__title">About me</h2>
 			<div class="about__content">
@@ -45,7 +57,7 @@
 					<p class="background__text">I began my journey in the distant 2015. But there were difficulties with my personal life and I abandoned it. Now 2018, I got a job as a web developer. I work with wordpress, 1C-bitrix.</p>
 					<p class="background__text">The personal time I improve my skill. I study a lot of technologies. And here I will lay out all my achievements in technology promotion. The code can be viewed at github.com</p>
 				</div>
-				<div class="merits-contacts">
+				<div class="merits-contacts merits-contacts_half-width">
 					<div class="merits">
 						<h3 class="merits__title">Merrits</h3>
 						<div class="merits-content merits__content">
@@ -78,7 +90,7 @@
 								<a href="https://telegram.me/bludce" class="contacts-content__link">telegram.me/bludce</a>
 								<a href="mailto:AleksZadorozhny90@gmail.com" class="contacts-content__link">AleksZadorozhny90@gmail.com</a>
 							</div>
-							<div class="contacts-content__item">
+							<div class="contacts-content__item contacts-content__item_column">
 								<div class="contacts-content__icon"></div>
 								<p class="contacts-content__text">Do not hesitate, write</p>
 							</div>
@@ -88,35 +100,35 @@
 			</div>
 		</div>
 	</section>
-	<section class="skills">
+	<section id="skills" class="skills skills_padding-top">
 		<div class="skills__container">
 			<h2 class="skills__title">Skills</h2>
 			<div class="skills__list">
 				<div class="skills-item">
-					<div class="skills-item__image skills-item__image-html" ></div>
+					<div class="skills-item__image skills-item__image_html" ></div>
 				</div>
 				<div class="skills-item">
-					<div class="skills-item__image skills-item__image-css" ></div>
+					<div class="skills-item__image skills-item__image_css" ></div>
 				</div>
 				<div class="skills-item">
-					<div class="skills-item__image skills-item__image-js" ></div>
+					<div class="skills-item__image skills-item__image_js" ></div>
 				</div>
 				<div class="skills-item">
-					<div class="skills-item__image skills-item__image-sass" ></div>
+					<div class="skills-item__image skills-item__image_sass" ></div>
 				</div>
 				<div class="skills-item">
-					<div class="skills-item__image skills-item__image-gulp"></div>
+					<div class="skills-item__image skills-item__image_gulp"></div>
 				</div>
 				<div class="skills-item">
-					<div class="skills-item__image skills-item__image-bootstrap"></div>
+					<div class="skills-item__image skills-item__image_bootstrap"></div>
 				</div>
 				<div class="skills-item">
-					<div class="skills-item__image skills-item__image-git"></div>
+					<div class="skills-item__image skills-item__image_git"></div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="portfolio">
+	<section id="portfolio" class="portfolio portfolio_padding-top">
 		<div class="portfolio__container">
 			<h2 class="portfolio__title">portfolio</h2>
 			<div class="portfolio__list works">
@@ -166,14 +178,7 @@
 			</p>
 		</div>
 	</footer>
-
-
-
-	<!--[if lt IE 9]>
-	<script src="libs/html5shiv/es5-shim.min.js"></script>
-	<script src="libs/html5shiv/html5shiv.min.js"></script>
-	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-	<script src="libs/respond/respond.min.js"></script>
-	<![endif]-->
+	<script src="js/libs/jquery.min.js"></script>
+	<script src="js/main.min.js"></script>
 </body>
 </html>
